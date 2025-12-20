@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Space Shooter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="gameContainer">
+  <canvas id="gameCanvas" width="1000" height="750"></canvas>
+  <div id="warningLayer" class="warning-flash"></div>
+
+  <div id="uiLayer">
+    <div class="hud-row">
+      <div class="panel">
+        <span class="label">Hull Integrity</span>
+        <div class="hp-track"><div id="hpFill" class="hp-fill"></div></div>
+      </div>
+      <div class="panel" style="text-align: right; border-bottom-color: #f59e0b;">
+        <span class="label">Score</span>
+        <span id="scoreVal" class="value">0</span>
+        <span style="font-size:1.2rem; color:#64748b; margin-left:10px;">/ <span id="nextBossVal">500</span></span>
+      </div>
+    </div>
+
+    <div id="bossHud">
+      <div class="boss-name">👹 Dreadnought 👹</div>
+      <div class="boss-track"><div id="bossHpFill" class="boss-fill"></div></div>
+    </div>
+  </div>
+
+  <div id="startScreen" class="overlay">
+    <h1>Space Shooter</h1>
+    <button onclick="Game.start()">INITIALIZE</button>
+  </div>
+
+  <div id="gameOverScreen" class="overlay hidden">
+    <h1 style="color:#ef4444; -webkit-text-fill-color:#ef4444;">MISSION FAILED</h1>
+    <p style="color:#cbd5e1; font-size: 2rem; margin-bottom: 2rem; font-weight:700;">FINAL SCORE: <span id="finalScore">0</span></p>
+    <button onclick="Game.start()">RETRY</button>
+  </div>
+</div>
+
+<script src="game.js"></script>
+</body>
+</html>
