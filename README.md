@@ -86,9 +86,5 @@ Tested and working in:
 
 Requires a browser with HTML5 Canvas and Web Audio API support.
 
-## 📝 License
-
-Feel free to use, modify, and distribute this game for any purpose.
-
 ---
 **Enjoy the game and aim for the high score! 🌟**
